@@ -1,0 +1,105 @@
+<%- include('header') %>
+<div class="container pt-3">
+  
+    <div class="float-left">
+      <img src="images/thirdShop.png" width="140px" height="30px">
+    </div>
+  
+  
+    <div class="float-right">
+      <div>
+        <!-- Button trigger modal -->
+            <button type="button" class="btn btn-danger btn-md" data-toggle="modal" data-target="#Modal">
+                ลงชื่อเข้าใช้
+            </button>
+        
+        <!-- Modal -->
+        <div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Sign up</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <form method="post">
+                    <div class="modal-body">
+                        <div>Name</div>
+                        <div><input type="text" class="form-control" name="name" value=""></div>
+
+                        <div>Username</div>
+                        <div><input type="text" class="form-control" name="usr" value=""></div>
+                        
+                        <div class="mt-1">Password</div>
+                        <div><input type="password" class="form-control" name="pwd" value=""></div>
+  
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#Modal2">Sign Up</button>
+                </div>
+            </div>
+            </div>
+        </div>
+                            <!-- Modal 2 -->
+        <div class="modal fade" id="Modal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Successful Login</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    <font style="font-size: smaller;">บันทึกลงในระบบเรียบร้อย</font>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">OK</button>
+                </div>
+            </div>
+            </div>
+        </div>
+            </form>
+  </div>
+  
+      <div class="clearfix"></div>
+    </div>
+  </div>
+
+<div class="d-flex justify-content-center container pb-5 " style="height: 100%;">
+    <div class="d-flex align-content-center flex-wrap pb-5">
+      <div class="text-center text-white pb-2">
+        <div><img src="images/Third.png" ></div>
+        <div class="mt-5">
+            <a href="/login" class="btn btn-outline-warning mt-4 btn-lg">
+                <span class="material-symbols-outlined material-icons">
+                    storefront
+                </span>
+                SHOP
+            </a>
+            <a href="/beLogin" class="ml-5 btn btn-outline-success mt-4 btn-lg">
+                <span class="material-symbols-outlined material-icons">
+                    room_preferences
+                </span>
+                Back-end Office
+            </a>
+            <div>
+                <h5 class="mt-2"><font style="color: rgba(255, 217, 4, 0.774);font-weight: lighter;font-size: smaller;padding-right: 45px;margin-left: -14px;">[ need to register ]</font><font style="color: rgba(0, 199, 66, 0.836); font-weight:lighter;font-size: smaller;padding-left: 13px;">[ don't need for register ]</font></h5>
+            </div>            
+        </div>
+      </div>
+    </div>
+    <div id="footer" class="p-3">
+        <div class="h5 text-center pr-4">
+            <span class="material-symbols-outlined material-icons">
+                call
+            </span>
+            Contact : 083-583-3301
+        </div>
+        <div class="text-center pr-2" style="font-size: smaller;">นาย พงศ์อมร วงศ์เฉลิมทานต์</div>
+    </div>
+</div>
+
+<%- include('footer') %>  

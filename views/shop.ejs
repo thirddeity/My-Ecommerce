@@ -1,0 +1,29 @@
+<%- include('shop_header') %>
+
+ <div class="container ">
+    
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-4 p-5">
+        <% product.forEach((p) => { %>
+            <div class="col mb-4 ">
+              <div class="card" style="width: 200px;">
+                <img src="../images/<%= p.img %>" class="card-img-top">
+                <div class="card-body">
+                  <div class="card-title h5"><%= p.name %></div>
+                  <div class="mt-2">  ฿ <%= p.price %></div>
+                  <div class="mt-4" align="center">
+                    <a href="/addCart/<%= p.id %>" class="btn btn-outline-success">
+                        <span class="material-symbols-outlined material-icons">
+                            shopping_cart_checkout
+                        </span>
+                        Cart
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+        <% }); %> 
+    </div>
+
+</div>
+
+<%- include('shop_footer') %> 

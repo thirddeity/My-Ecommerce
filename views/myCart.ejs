@@ -1,0 +1,49 @@
+<%- include('shop_header') %>
+
+<div class="container">
+    <div class="h5 text-center">ตะกร้าของฉัน</div>
+
+    <table class="table table-bordered table-stripped">
+        <thead>
+            <tr align="center">
+                <td>จัดการตะกร้า</td>
+                <td width="180px">ภาพสินค้า</td>
+                <td width="130px">barcode</td>
+                <td width="200px">รายการ</td>
+                <td width="130px">ราคา</td>
+                <td width="80px">จำนวน</td>
+                <td width="170px">ยอดรวม</td>
+            </tr>
+        </thead>
+        <tbody>
+            <% products.forEach((p) => { %>
+                <tr>
+                    <td align="center">
+                        <a href="/editItemInCart/<%= p.id %>" class="btn btn-info">
+                            <span class="material-symbols-outlined material-icons">
+                            voting_chip</span>
+                            เพิ่ม/ลด
+                        </a>
+                        <a href="/deleteItemInCart/<%= p.id %>" onclick="return confirm('Are you sure to Delete ?')" class="btn btn-danger">
+                            <span class="material-symbols-outlined material-icons">
+                            delete</span>
+                            ลบ
+                        </a>
+                    </td>
+                    <td align="center"><img src="../images/<%= p.img %>" width="140px" height="150px"></td>
+                    <td  align="center"><%= p.barcode %></td>
+                    <td align="center"><%= p.name %></td>
+                    <td align="right"><%= numeral(p.price).format() %></td>
+                    <td align="right"><%= numeral(p.qty).format() %></td>
+                    <td align="right"><%= numeral(p.price * p.qty).format() %></td>
+                </tr>
+            <% }) %> 
+        </tbody>
+    </table>
+
+    <div class="text-center alert-success mb-5 p-3">
+        จำนวน: <%= totalQty %> ชิ้น เป็นเงิน: <%= numeral(totalPrice).format() %> บาท
+    </div>
+</div>
+
+<%- include('shop_footer') %>  

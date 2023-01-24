@@ -1,0 +1,51 @@
+<%- include('be_header') %>
+
+<div class="container card" style="overflow: auto;">
+    <div class="card-body">
+        <div class="card-title h5 text-center mb-4">
+            ประเภทสินค้า
+        </div>
+        <div class="mb-3">
+            <a href="/addCategory" class="btn btn-info">
+                <span class="material-symbols-outlined material-icons">
+                    add
+                </span>
+                เพิ่มประเภทสินค้า
+            </a>
+        </div>
+
+        <table class="table table-bordered table-stripped">
+            <thead align="center">
+                <tr>
+                    <td width="235px">
+                        จัดการข้อมูล
+                    </td>
+                    <td >ประเภทสินค้า</td>
+                </tr>
+            </thead>
+            <tbody>
+                <% categories.forEach((c) => { %>
+                <tr>
+                    <td>
+                        <a href="/deleteCategory/<%= c.id %>" class="btn btn-danger mr-2">
+                            <span class="material-symbols-outlined material-icons">
+                                delete
+                            </span>
+                            delete
+                        </a>
+                        <a href="/editCategory/<%= c.id %>" class="btn btn-dark">
+                            <span class="material-symbols-outlined material-icons">
+                                edit
+                            </span>
+                            edit
+                        </a>
+                    </td>
+                    <td><%= c.name %></td>
+                </tr>
+                <% }) %> 
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<%- include('be_footer') %>
