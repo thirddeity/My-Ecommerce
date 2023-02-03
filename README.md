@@ -10,4 +10,7 @@ This is my Project E-commerce have
 - can search product in shop
 - check status cart with phone number
 
-However this is my mini project let's enjoy my project!!
+Programming language require:
+HTML CSS JavaScript Bootstrap4.6.xx Node.Js Mysql(phpmyadmin) use EJS template
+
+However this is my bigproject let's enjoy my project!!
